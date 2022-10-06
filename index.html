@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tokusatsu utility bot for Telegram">
+    <meta name="author" content="DimensionalDragon">
+    <meta name="keywords" content="telegram, bot, telebot, tokusatsu, toku, kamen rider, super sentai">
+    <meta name="google-site-verification" content="zCKu2UonL49yBoiOwHAysMRjRnuu1zNiJY-hvf-sZTs" />
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css" integrity="sha512-Cdvnk1SFWqcb3An6gMyqDRH40Js8qmsWcSK10I2gSifCe2LilaPMsHd6DldEvQ3uIlCb1qdRUrNeAFFleOu4xQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700;800&display=swap" rel="stylesheet"></noscript>
+    
+    <script src="https://kit.fontawesome.com/9b73585f4c.js" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="styles/style.min.css">
+    <title>TeleToku</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" id="main-logo"><i class="fa-brands fa-telegram"></i>TeleToku</a>
+            <div class="hamburger-container">
+                <div class="hamburger-menu"></div>
+            </div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tech">Tech</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="welcome">
+            <div class="title">
+                <h1>TeleToku</h1>
+                <p>Tokusatsu utility bot for Telegram</p>
+            </div>
+            <div class="welcome-decoration">
+                <div class="welcome-image">
+                    <img src="assets/icons/smartphone.png" alt="smartphone icon">
+                    <a href="https://www.flaticon.com/free-icons/hand" title="hand icons">Hand icons created by Smashicons - Flaticon</a>
+                </div>
+                <div class="welcome-telegram-button">
+                    <a href="https://t.me/YouTubeLinkEraser_bot" target="_blank">
+                        <i class="fa-brands fa-telegram"></i>
+                        <p>TRY IT NOW</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="display: block;">
+                <path fill="#332FD0" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,117.3C384,139,480,213,576,229.3C672,245,768,203,864,186.7C960,171,1056,181,1152,170.7C1248,160,1344,128,1392,112L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+                <path fill="#E15FED" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,117.3C384,139,480,213,576,229.3C672,245,768,203,864,186.7C960,171,1056,181,1152,170.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+            <article id="about">
+                <i class="fa-solid fa-comments"></i>
+                <div class="article-content">
+                    <h2>About This Bot</h2>
+                    <p>This bot is a Telegram utility bot for tokusatsu related tasks such as fetching next episode preview video and downloading latest episode subtitle file.</p>
+                    <p>Please note that this bot is currently only supporting operations for Kamen Rider series</p>
+                </div>
+            </article>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="display: block;">
+                <path fill="#E15FED" fill-opacity="1" d="M0,128L48,122.7C96,117,192,107,288,122.7C384,139,480,181,576,208C672,235,768,245,864,234.7C960,224,1056,192,1152,186.7C1248,181,1344,203,1392,213.3L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+                <path fill="#6EDCD9" fill-opacity="1" d="M0,128L48,122.7C96,117,192,107,288,122.7C384,139,480,181,576,208C672,235,768,245,864,234.7C960,224,1056,192,1152,186.7C1248,181,1344,203,1392,213.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+            <article id="tech">
+                <div class="article-content">
+                    <h2>Technology</h2>
+                    <p>Technologies used in this bot's development</p>
+                    <div class="techlist">
+                        <ul>
+                            <li>
+                                <i class="fa-brands fa-js-square tech-icon"></i>
+                                <p>Javascript</p>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-node-js tech-icon"></i>
+                                <p>Node JS</p>
+                            </li>
+                            <li>
+                                <img src="assets/icons/expressjs-icon.png" alt="express-icon" class="tech-icon">
+                                <p>Express JS</p>
+                            </li>
+                            <li>
+                                <i class="icon-mongodb tech-icon"></i>
+                                <p>MongoDB</p>
+                            </li>
+                        </ul>
+                        <h3>Additional Libraries</h3>
+                        <ul id="library-list">
+                            <li>
+                                <p>Cheerio</p>
+                            </li>
+                            <li>
+                                <p>Mega JS</p>
+                            </li>
+                            <li>
+                                <p>YTDL-Core</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <i class="fa-solid fa-gears"></i>
+            </article>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="display: block;">
+                <path fill="#6EDCD9" fill-opacity="1" d="M0,0L48,16C96,32,192,64,288,74.7C384,85,480,75,576,80C672,85,768,107,864,133.3C960,160,1056,192,1152,197.3C1248,203,1344,181,1392,170.7L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+                <path fill="#E15FED" fill-opacity="1" d="M0,0L48,16C96,32,192,64,288,74.7C384,85,480,75,576,80C672,85,768,107,864,133.3C960,160,1056,192,1152,197.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+            <article id="features">
+                <i class="fa-solid fa-rectangle-list"></i>
+                <div class="article-content">
+                    <h2>Features</h2>
+                    <p></p>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-closed-captioning"></i>
+                            <h3>Subtitle</h3>
+                            <h4>/izusubs</h4>
+                            <p>Get latest episode subtitle file from Izusubs</p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-video"></i>
+                            <h3>Preview Video</h3>
+                            <h4>/nextpreview</h4>
+                            <p>Get the preview video for the next episode</p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-images"></i>
+                            <h3>Preview Images</h3>
+                            <h4>/nextstill</h4>
+                            <p>Get all preview images for the next episode from the official website</p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-hourglass"></i>
+                            <h3>Coming Soon</h3>
+                            <p>More commands, tasks, and supported series are coming soon</p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="display: block;">
+                <path fill="#E15FED" fill-opacity="1" d="M0,256L48,250.7C96,245,192,235,288,224C384,213,480,203,576,213.3C672,224,768,256,864,261.3C960,267,1056,245,1152,229.3C1248,213,1344,203,1392,197.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+                <path fill="#332FD0" fill-opacity="1" d="M0,256L48,250.7C96,245,192,235,288,224C384,213,480,203,576,213.3C672,224,768,256,864,261.3C960,267,1056,245,1152,229.3C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+            <article id="contact">
+                <h2>Contact Us</h2>
+                <form method="post" id="contact-form">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                    <label for="message">Message</label>
+                    <textarea type="text" name="message" id="message" required></textarea>
+                    <div id="post-submit-message">
+                        <i></i>
+                        <p></p>
+                    </div>
+                    <button type="submit">
+                        <i class="fa-brands fa-telegram"></i>
+                        <i class="fa-solid fa-spinner fa-spin hide"></i>
+                        <span>Send</span>
+                </button>
+                </form>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <p>Created by DimensionalDragon</p>
+        <div class="profile-links">
+            <ul>
+                <li>
+                    <a href="https://www.github.com/DimensionalDragon/">
+                        <p><i class="fa-brands fa-github"></i> Github</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/andhika-satrya-980071228">
+                        <p><i class="fa-brands fa-linkedin"></i> LinkedIn</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="src/script.min.js"></script>
+</body>
+</html>

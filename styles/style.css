@@ -1,0 +1,546 @@
+* {
+    box-sizing: border-box;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 700;
+    font-display: fallback;
+    margin: 0;
+    padding: 0;
+}
+
+/* Welcome screen */
+#welcome {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    padding: 75px 0;
+    padding-bottom: 0;
+    background-color: #332FD0;
+    text-align: center;
+    user-select: none;
+}
+
+#welcome h1 {
+    font-size: 100px;
+    font-weight: 800;
+    margin: 0;
+}
+
+#welcome p {
+    margin: 0;
+}
+
+#welcome a {
+    color: #706ede;
+    text-decoration: none;
+    font-size: 0.5em;
+}
+
+#welcome div {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.welcome-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-image img {
+    width: 15em;
+    height: 15em;
+}
+
+.welcome-telegram-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.welcome-telegram-button a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #28c2c2;
+    border-radius: 10px;
+    padding: 1em 3em;
+    text-decoration: none;
+}
+
+.welcome-telegram-button i {
+    font-size: 4em;
+    margin-right: 5px;
+}
+
+.welcome-telegram-button p {
+    font-size: 2em;
+    margin-left: 5px;
+}
+
+/* Header and nav */
+header {
+    display: inline;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #9254C8;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 3;
+    user-select: none;
+}
+
+#main-logo {
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+#main-logo i {
+    font-size: 1.5em;
+    margin: 2px;
+    padding: 10px;
+    padding-left: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    margin: 0;
+}
+
+nav li {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    list-style-type: none;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+nav li:hover {
+    background-color: #a75fe5;
+}
+
+nav a {
+    font-size: large;
+    text-decoration: none;
+}
+
+.hamburger-container {
+    display: none;
+    position: relative;
+    width: 28px;
+    height: 28px;
+    align-self: center;
+    right: 10px;
+    cursor: pointer;
+}
+
+.hamburger-menu,
+.hamburger-menu::before,
+.hamburger-menu::after {
+    background-color: white;
+    border-radius: 3px;
+    position: absolute;
+    width: 28px;
+    height: 4px;
+}
+
+.hamburger-menu {
+    top: 12px;
+}
+
+.hamburger-menu::before {
+    content: "";
+    top: -7px;
+    transition: all 0.1s ease-in-out;
+}
+
+.hamburger-menu::after {
+    content: "";
+    top: 7px;
+    transition: all 0.1s ease-in-out;
+}
+
+.hamburger-menu.open {
+    background-color: #9254C8;
+}
+
+.hamburger-menu.open::before {
+    transform: rotate(45deg);
+    top: 1px;
+    transition: all 0.1s ease-in-out;
+}
+
+.hamburger-menu.open::after {
+    transform: rotate(-45deg);
+    top: 1px;
+    transition: all 0.1s ease-in-out;
+}
+
+/* Welcome Screen & All Articles */
+article {
+    display: flex;
+    align-items: center;
+    padding: 75px;
+}
+
+article > i {
+    text-align: center;
+    font-size: 250px;
+    flex: 1;
+}
+
+.article-content {
+    width: 100%;
+    flex: 1;
+}
+
+article *,
+#welcome * {
+    opacity: 0;
+    transform: translateY(25px);
+    transition-property: transform, opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+   
+article.show *,
+#welcome.show * {
+    opacity: 1;
+    transform: translateY(0);
+    transition-property: transform, opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+article h2 {
+    font-size: 3em;
+    margin-top: 0;
+}
+
+/* About */
+#about {
+    background-color: #E15FED;
+    margin-top: 0;
+}
+
+/* Technology */
+#tech {
+    background-color: #6EDCD9;
+}
+
+.techlist ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    padding: 0;
+}
+
+.techlist li {
+    display: flex;
+    font-size: 1.25em;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech-icon {
+    font-size: 1.5em;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.tech-icon + p {
+    margin-top: 5px;
+    font-size: 0.75em;
+}
+
+.techlist h3 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+#library-list {
+    font-size: 0.75em;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#library-list p {
+    margin-top: 0;
+}
+
+/* Features */
+#features {
+    background-color: #E15FED;
+    padding-bottom: 0;
+}
+
+#features ul {
+    display: flex;
+    padding-left: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+#features li {
+    flex: 1 0 50%;
+    font-size: 50px;
+    padding: 10px;
+}
+
+#features h3 {
+    font-size: 0.4em;
+    margin: 0;
+}
+
+#features h4 {
+    font-size: 0.3em;
+    margin: 0;
+}
+
+#features p {
+    font-size: 0.25em;
+    margin-bottom: 40px;
+}
+
+/* Contact Form */
+#contact {
+    flex-direction: column;
+    user-select: none;
+    padding-top: 75px;
+    background-color: #332FD0;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    max-width: 500px;
+    margin: 10px auto;
+}
+
+#contact label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#contact input,
+#contact textarea {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 700;
+    font-display: fallback;
+    border: none;
+    border-radius: 3px;
+    height: 25px;
+    color: black;
+}
+
+#contact textarea {
+    height: 150px;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline: none;
+}
+
+#post-submit-message {
+    display: none;
+    align-items: center;
+    margin-top: 15px;
+    padding: 0 10px 0 10px;
+    border-radius: 10px;
+}
+
+#post-submit-message i {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+#contact button {
+    cursor: pointer;
+    align-self: center;
+    background-color: #28c2c2;
+    border: none;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 0.5em 1.5em;
+    font-size: 1.25em;
+}
+
+#contact button i {
+    font-size: 1em;
+    margin-right: 5px;
+}
+
+.hide {
+    display: none;
+}
+
+/* Footer */
+footer {
+    user-select: none;
+    background-color: black;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-bottom: 2px;
+    padding: 0;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer p {
+    margin: 0 5px 0 5px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.profile-links li:hover p {
+    transform: translateY(-5px);
+    transition: transform 0.1s ease-in-out;
+}
+
+/* Responsive Changes */
+@media screen and (max-width: 768px) {
+    #welcome {
+        flex-direction: column;
+        font-size: 15px;
+    }
+
+    #welcome h1 {
+        font-size: 75px;
+    }
+
+    nav {
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    #main-logo {
+        flex: 0 0;
+    }
+
+    .hamburger-container {
+        flex: 0 0 10%;
+    }
+
+    nav ul {
+        display: none;
+        flex: 1 0 100%;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    nav ul a {
+        display: inline-block;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .hamburger-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    article {
+        flex-direction: column;
+    }
+
+    .article-content {
+        order: 1;
+    }
+
+    article > i {
+        font-size: 150px;
+        margin: 20px 0;
+        order: 0;
+    }
+
+    .techlist ul {
+        flex-wrap: wrap;
+    }
+
+    .techlist li {
+        flex: 1 0 50%;
+    }
+
+    .profile {
+        font-size: 0.75em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #welcome {
+        font-size: 10px;
+    }
+
+    #welcome h1 {
+        font-size: 50px;
+    }
+    
+    article {
+        padding: 40px 20px 20px 20px;
+    }
+
+    #features li {
+        flex: 1 0 100%;
+    }
+
+    #contact form {
+        width: 75vw;
+        max-width: 250px;
+    }
+
+    #contact h2,
+    .profile h2 {
+        font-size: 1.75em;
+    }
+}
